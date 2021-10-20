@@ -2,7 +2,7 @@
 
 Ionic:
 
-   Ionic CLI                     : 6.17.1 (/Users/jrequena/.nvm/versions/node/v12.20.2/lib/node_modules/@ionic/cli)
+   Ionic CLI                     : 6.17.1 
    Ionic Framework               : @ionic/angular 5.8.4
    @angular-devkit/build-angular : 12.1.4
    @angular-devkit/schematics    : 12.2.10
