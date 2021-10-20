@@ -63,7 +63,7 @@ export class CardsComponent  {
       this.handleShift();
     }
 
-    this.renderer.addClass(this.projectCardsArray[0].nativeElement, 'moving');
+   // this.renderer.addClass(this.projectCardsArray[0].nativeElement, 'moving');
 
     if (event.deltaX > 0) { this.toggleChoiceIndicator(false,true) }
     if (event.deltaX < 0) { this.toggleChoiceIndicator(true,false) }
@@ -72,7 +72,7 @@ export class CardsComponent  {
     let yMulti = event.deltaY / 80;
     let rotate = xMulti * yMulti;
 
-    this.renderer.setStyle(this.projectCardsArray[0].nativeElement, 'transform', 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)');
+  //  this.renderer.setStyle(this.projectCardsArray[0].nativeElement, 'transform', 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)');
 
     this.shiftRequired = true;
 
@@ -84,12 +84,12 @@ export class CardsComponent  {
 
     if (!this.cards.length) return;
 
-    this.renderer.removeClass(this.projectCardsArray[0].nativeElement, 'moving');
+  // this.renderer.removeClass(this.projectCardsArray[0].nativeElement, 'moving');
 
     let keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
     if (keep) {
 
-      this.renderer.setStyle(this.projectCardsArray[0].nativeElement, 'transform', '');
+    //  this.renderer.setStyle(this.projectCardsArray[0].nativeElement, 'transform', '');
       this.shiftRequired = false;
 
     } else {
@@ -102,7 +102,7 @@ export class CardsComponent  {
       let yMulti = event.deltaY / 80;
       let rotate = xMulti * yMulti;
 
-      this.renderer.setStyle(this.projectCardsArray[0].nativeElement, 'transform', 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)');
+   //  this.renderer.setStyle(this.projectCardsArray[0].nativeElement, 'transform', 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)');
 
       this.shiftRequired = true;
 
