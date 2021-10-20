@@ -26,3 +26,7 @@ System:
    NodeJS : v12.20.2 (/Users/jrequena/.nvm/versions/node/v12.20.2/bin/node)
    npm    : 7.24.0
    OS     : macOS Big Sur
+   
+  
+  ![Alt text](./GIF-2021-10-20-14-07-27.gif?raw=true "Bug")
+ 
