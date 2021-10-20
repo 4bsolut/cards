@@ -6,7 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
+  cards = [];
+  constructor() {
+    for (let i=0; i<=20;i++){
+        this.cards.push(
+          {
+            img: "https://placeimg.com/500/500/people",
+            title: "Demo Card "+i,
+            description: "Demo card body"
+          }
+        )
+    }
+  console.log(this.cards.length)
+  }
+  logChoice(choice) {
+    console.log(choice)
+  };
 
 }
