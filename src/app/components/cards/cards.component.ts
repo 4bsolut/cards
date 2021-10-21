@@ -9,7 +9,7 @@ export class CardsComponent  {
 
   
   @Input('cards') cards: Array<{
-    img: string,
+    images: Array<any>,
     title: string,
     description: string
   }>;
@@ -41,10 +41,24 @@ export class CardsComponent  {
       this.emitChoice(heart, this.cards[0]);
     };
     if(this.cards.length==1){//feed again the cards array
-      for (let i=0; i<=40;i++){
+      for (let i=0; i<=20;i++){
         this.cards.push(
           {
-            img: "https://placeimg.com/500/500/people",
+            images:[ 
+              {
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },
+            ],
             title: "Demo Card "+i,
             description: "Demo card body"
           }
@@ -110,7 +124,21 @@ export class CardsComponent  {
         for (let i=0; i<=40;i++){
           this.cards.push(
             {
-              img: "https://placeimg.com/500/500/people",
+              images:[ 
+                {
+                  img: "https://placeimg.com/500/500/people"
+                },{
+                  img: "https://placeimg.com/500/500/people"
+                },{
+                  img: "https://placeimg.com/500/500/people"
+                },{
+                  img: "https://placeimg.com/500/500/people"
+                },{
+                  img: "https://placeimg.com/500/500/people"
+                },{
+                  img: "https://placeimg.com/500/500/people"
+                },
+              ],
               title: "Demo Card "+i,
               description: "Demo card body"
             }

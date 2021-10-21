@@ -17,17 +17,19 @@
       </div>
 
   </div>
-  <div class="project--cards" (pan)="handlePan($event)" (panend)="handlePanEnd($event)" >
-
+  <div class="project--cards"  (pan)="handlePan($event)" (panend)="handlePanEnd($event)" >
       <div #bCard class="project--card" (transitionend)="handleShift()" *ngFor="let card of cards; let i = index"
           [ngStyle]="{ zIndex: cards.length - i }">
-
-          <img #bCardImage [src]="card.img" (load)="bCardImage.style.opacity = 1">
-          <h3>{{ card.title }}</h3>
-          <p>{{ card.description }}</p>
-
+            <ion-card>
+                <ion-card-header >
+                    <img  class="project--imgs" *ngFor="let img of card.images; let o = index" #bCardImage [src]="img.img" (load)="bCardImage.style.opacity = 1" [ngStyle]="{ zIndex: card.images - o }">
+                </ion-card-header>
+                <ion-card-content>
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                </ion-card-content>
+            </ion-card>
       </div>
-
   </div>
   <div class="project--buttons">
 

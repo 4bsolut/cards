@@ -29,22 +29,43 @@
     height: 100%;
     overflow: hidden;
   }
-  
+
+  .project--imgs { 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+ 
+
   .project--card {
     display: inline-block;
     width: 80%;
-    height: 76%;
+    height: 78%;
     background: #FFFFFF;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     border-radius: 8px;
     overflow: hidden;
     position: absolute;
     top:5%;
-    will-change: transform;
-    transition: all 0.3s ease-in-out;
+    //will-change: transform;
+    transition: transform 0.3s ease-in-out;
     cursor: -webkit-grab;
     cursor: -moz-grab;
     cursor: grab;
+  }
+  ion-card {
+    transition: transform 0.3s ease-in-out;
+    flex-basis: 100%;
+    height:100%;
+    margin:0px;
+    ion-card-header{
+      height:50%;
+      padding:0px;
+    }
   }
   
   .moving.project--card {
@@ -70,7 +91,7 @@
     max-height: 75%;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    //transition: opacity 0.3s ease-in-out;
   }
   
   .project--card h3 {
@@ -91,7 +112,7 @@
     position: absolute;
     flex: 0 0 100px;
     text-align: center;
-    bottom: 65px;
+    bottom: 40px;
     left: 0;
     right: 0;
   }

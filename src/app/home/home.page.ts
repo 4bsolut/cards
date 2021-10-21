@@ -11,7 +11,21 @@ export class HomePage {
     for (let i=0; i<=20;i++){
         this.cards.push(
           {
-            img: "https://placeimg.com/500/500/people",
+            images:[ 
+              {
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },{
+                img: "https://placeimg.com/500/500/people"
+              },
+            ],
             title: "Demo Card "+i,
             description: "Demo card body"
           }
