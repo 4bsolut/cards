@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
   cards = [];
   constructor() {
-    for (let i=0; i<=20;i++){
+    for (let i=0; i<=10;i++){
         this.cards.push(
           {
             images:[ 

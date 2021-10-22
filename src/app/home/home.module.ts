@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +16,6 @@ import { ComponentModule } from '../components/component-modules';
     HomePageRoutingModule,
     ComponentModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage ],
 })
 export class HomePageModule {}

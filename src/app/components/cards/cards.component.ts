@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChildren, QueryList, ElementRef, Output, EventEmitter, Renderer2 } from '@angular/core';
-
+import SwiperCore, { Autoplay, Pagination, Navigation,SwiperOptions } from "swiper"
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -16,6 +17,15 @@ export class CardsComponent  {
 
   @ViewChildren('bCard') projectCards: QueryList<ElementRef>;
   projectCardsArray: Array<ElementRef>;
+
+  config: SwiperOptions = {
+    slidesPerView: 3,
+    autoplay:{
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    navigation:true
+  };
 
   @Output() choiceMade = new EventEmitter();
 

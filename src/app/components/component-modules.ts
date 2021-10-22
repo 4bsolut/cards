@@ -2,9 +2,9 @@ import { NgModule} from '@angular/core';
  
 import { IonicModule } from '@ionic/angular';
  
- 
 import { CardsComponent } from './cards/cards.component';
 import { CommonModule } from '@angular/common';
+import { SwiperModule } from 'swiper/angular';
  
  
 @NgModule({  
@@ -16,7 +16,8 @@ import { CommonModule } from '@angular/common';
     ],
     imports: [
         CommonModule,
-        IonicModule
+        IonicModule,
+        SwiperModule
     ],
     providers: []
 })
